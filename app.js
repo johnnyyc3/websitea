@@ -36,3 +36,61 @@ document.querySelector(".notice button").addEventListener("click", (event) => {
 document.querySelector(".mobile-menu").addEventListener("click", () => {
   document.querySelector(".sidebar").classList.toggle("mobile-open");
 });
+
+const modal = document.querySelector("#finding-modal");
+const modalTitle = document.querySelector("#modal-title");
+
+function openFinding(finding) {
+  modalTitle.textContent = finding.dataset.finding;
+  modal.hidden = false;
+  document.querySelector("#modal-close").focus();
+}
+
+findings.forEach((finding) => {
+  finding.addEventListener("click", () => openFinding(finding));
+  finding.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openFinding(finding);
+    }
+  });
+});
+
+document.querySelector("#modal-close").addEventListener("click", () => {
+  modal.hidden = true;
+});
+
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) modal.hidden = true;
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !modal.hidden) modal.hidden = true;
+});
+
+document.querySelectorAll(".domain-card").forEach((domain) => {
+  const selectDomain = () => {
+    document.querySelectorAll(".domain-card").forEach((card) => card.classList.remove("selected"));
+    domain.classList.add("selected");
+  };
+  domain.addEventListener("click", selectDomain);
+  domain.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      selectDomain();
+    }
+  });
+});
+
+document.querySelector("#manage-domains").addEventListener("click", () => {
+  document.querySelector("#domains").scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelector("#activity-toggle").addEventListener("click", (event) => {
+  event.currentTarget.textContent = "Showing latest";
+});
+
+document.querySelector("#modal-evidence").addEventListener("click", () => {
+  modal.hidden = true;
+  document.querySelector("#evidence").scrollIntoView({ behavior: "smooth" });
+});
