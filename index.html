@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aster Bank security posture audit dashboard demo" />
+    <title>Aster Bank | Security posture audit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="#" aria-label="Aster Bank security home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Aster<span class="brand-muted">/security</span></span>
+        </a>
+        <div class="workspace-switcher">
+          <span class="eyebrow">WORKSPACE</span>
+          <button class="workspace-button" type="button">
+            <span class="avatar avatar-purple">AS</span>
+            <span><strong>Aster Bank</strong><small>FY24 controls review</small></span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+        </div>
+        <nav class="nav-links">
+          <span class="nav-label">Overview</span>
+          <a class="nav-link active" href="#overview"><span class="nav-icon">◈</span>Dashboard</a>
+          <a class="nav-link" href="#findings"><span class="nav-icon">⊙</span>Findings <span class="nav-count">12</span></a>
+          <a class="nav-link" href="#evidence"><span class="nav-icon">▣</span>Evidence</a>
+          <span class="nav-label">Governance</span>
+          <a class="nav-link" href="#domains"><span class="nav-icon">◌</span>Audit domains</a>
+          <a class="nav-link" href="#team"><span class="nav-icon">♙</span>Review team</a>
+          <a class="nav-link" href="#reports"><span class="nav-icon">▤</span>Reports</a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="help-card"><span class="help-icon">?</span><strong>Need a hand?</strong><p>Review methodology &amp; controls</p><a href="#methodology">Open guide →</a></div>
+          <div class="profile">
+            <span class="avatar avatar-green">JD</span><span><strong>Jordan Davis</strong><small>Security lead</small></span><button class="more-button" aria-label="Open profile menu">•••</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu" aria-label="Open navigation">☰</button>
+          <div class="breadcrumb"><span>Security workspace</span><b>/</b><strong>Dashboard</strong></div>
+          <div class="topbar-actions">
+            <span class="demo-badge">DEMO DATA</span>
+            <button class="icon-button" aria-label="Notifications">♧<i></i></button>
+            <button class="icon-button" aria-label="Help">?</button>
+            <span class="top-avatar avatar avatar-green">JD</span>
+          </div>
+        </header>
+
+        <div class="content-wrap">
+          <section class="page-intro" id="overview">
+            <div>
+              <p class="eyebrow green">SECURITY POSTURE REVIEW <span class="pulse-dot"></span> LIVE REVIEW</p>
+              <h1>Good morning, Jordan <span aria-hidden="true">✦</span></h1>
+              <p class="intro-copy">Here’s the latest view of Aster Bank’s security controls and open risk items.</p>
+            </div>
+            <div class="intro-actions"><span class="last-updated">Last synced <strong>Today, 09:42 AM</strong></span><button class="button button-dark">↗ Export report</button></div>
+          </section>
+          <div class="notice"><span class="notice-icon">✓</span><p><strong>Authorized use only.</strong> This workspace is for defensive compliance assessment. Only review systems and evidence you are explicitly authorized to access.</p><button aria-label="Dismiss notice">×</button></div>
+
+          <section class="summary-grid" aria-label="Security summary">
+            <article class="summary-card score-card">
+              <div class="card-heading"><span>Overall security score</span><span class="trend positive">↑ 4.2%</span></div>
+              <div class="score-row"><div class="score-ring"><strong>82</strong><span>/ 100</span></div><div><strong class="score-status">Healthy posture</strong><p>Above your 75 target</p></div></div>
+              <div class="sparkline" aria-label="Score trend over the last 6 months"><span style="height:32%"></span><span style="height:45%"></span><span style="height:39%"></span><span style="height:56%"></span><span style="height:65%"></span><span style="height:72%"></span><span style="height:88%"></span></div>
+              <div class="spark-labels"><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Now</span></div>
+            </article>
+            <article class="summary-card">
+              <div class="card-heading"><span>Risk distribution</span><a href="#findings">View all →</a></div>
+              <div class="risk-total"><strong>24</strong><span>total findings</span></div>
+              <div class="risk-bar"><span class="risk-critical"></span><span class="risk-high"></span><span class="risk-medium"></span><span class="risk-low"></span></div>
+              <div class="risk-legend"><span><i class="dot critical"></i>Critical <b>1</b></span><span><i class="dot high"></i>High <b>4</b></span><span><i class="dot medium"></i>Medium <b>12</b></span><span><i class="dot low"></i>Low <b>7</b></span></div>
+            </article>
+            <article class="summary-card">
+              <div class="card-heading"><span>Control coverage</span><span class="trend positive">↑ 6.8%</span></div>
+              <div class="coverage"><strong>76%</strong><span>controls tested</span></div>
+              <div class="progress"><span style="width:76%"></span></div>
+              <div class="coverage-meta"><span><i class="dot green-dot"></i>91 passed</span><span>29 remaining</span></div>
+              <p class="card-footnote">15 controls improved since last review</p>
+            </article>
+          </section>
+
+          <section class="insight-grid" aria-label="Security insights">
+            <article class="panel posture-panel">
+              <div class="panel-header"><div><p class="eyebrow">POSTURE INTELLIGENCE</p><h2>What changed this month</h2></div><span class="insight-period">September 2024</span></div>
+              <div class="insight-body">
+                <div class="insight-score"><strong>+4.2</strong><span>score points</span><small>vs. August</small></div>
+                <div class="insight-bars" aria-label="Monthly security score trend"><span style="height:45%"><i>78</i></span><span style="height:58%"><i>79</i></span><span style="height:64%"><i>80</i></span><span style="height:73%"><i>81</i></span><span class="current" style="height:88%"><i>82</i></span></div>
+              </div>
+              <div class="insight-callout"><span class="callout-icon">↗</span><p><strong>Access governance is improving.</strong> 15 controls moved to passing after the latest evidence review.</p></div>
+            </article>
+            <article class="panel activity-panel">
+              <div class="panel-header"><div><p class="eyebrow">RECENT ACTIVITY</p><h2>Review timeline</h2></div><button class="text-button" id="activity-toggle">View log →</button></div>
+              <div class="activity-list">
+                <div class="activity-item"><span class="activity-icon green-bg">✓</span><div><strong>IAM evidence approved</strong><small>Jordan Davis · Today, 09:38 AM</small></div><span class="activity-status">Approved</span></div>
+                <div class="activity-item"><span class="activity-icon blue-bg">↗</span><div><strong>Network review assigned</strong><small>Riley Kim · Yesterday, 04:12 PM</small></div><span class="activity-status muted-status">In progress</span></div>
+                <div class="activity-item"><span class="activity-icon amber-bg">!</span><div><strong>Finding due date changed</strong><small>Alex Stone · Sep 18, 11:24 AM</small></div><span class="activity-status muted-status">Audit log</span></div>
+              </div>
+            </article>
+          </section>
+
+          <section class="section-block" id="domains">
+            <div class="section-header"><div><p class="eyebrow">CONTROL AREAS</p><h2>Audit domains</h2></div><button class="text-button" id="manage-domains">Manage domains <span>→</span></button></div>
+            <div class="domain-grid">
+              <article class="domain-card selected" tabindex="0" data-domain="Identity &amp; access"><div class="domain-top"><span class="domain-icon violet">⌘</span><span class="domain-state complete">On track</span></div><h3>Identity &amp; access</h3><div class="domain-progress"><span style="width:88%"></span></div><div class="domain-meta"><span>18 / 20 controls</span><strong>88%</strong></div></article>
+              <article class="domain-card" tabindex="0" data-domain="Network security"><div class="domain-top"><span class="domain-icon blue">⌁</span><span class="domain-state review">In review</span></div><h3>Network security</h3><div class="domain-progress"><span style="width:74%"></span></div><div class="domain-meta"><span>14 / 19 controls</span><strong>74%</strong></div></article>
+              <article class="domain-card"><div class="domain-top"><span class="domain-icon teal">◇</span><span class="domain-state complete">On track</span></div><h3>Data protection</h3><div class="domain-progress"><span style="width:81%"></span></div><div class="domain-meta"><span>17 / 21 controls</span><strong>81%</strong></div></article>
+              <article class="domain-card"><div class="domain-top"><span class="domain-icon orange">◫</span><span class="domain-state attention">Needs attention</span></div><h3>Application security</h3><div class="domain-progress"><span style="width:63%"></span></div><div class="domain-meta"><span>10 / 16 controls</span><strong>63%</strong></div></article>
+              <article class="domain-card"><div class="domain-top"><span class="domain-icon rose">◉</span><span class="domain-state review">In review</span></div><h3>Incident response</h3><div class="domain-progress"><span style="width:70%"></span></div><div class="domain-meta"><span>7 / 10 controls</span><strong>70%</strong></div></article>
+              <article class="domain-card"><div class="domain-top"><span class="domain-icon slate">♧</span><span class="domain-state complete">On track</span></div><h3>Third-party risk</h3><div class="domain-progress"><span style="width:79%"></span></div><div class="domain-meta"><span>15 / 19 controls</span><strong>79%</strong></div></article>
+            </div>
+          </section>
+
+          <section class="lower-grid" id="findings">
+            <div class="panel findings-panel">
+              <div class="panel-header"><div><p class="eyebrow">ACTION REQUIRED</p><h2>Priority findings</h2></div><a href="#all-findings" class="text-button">See all findings →</a></div>
+              <div class="toolbar"><label class="search"><span>⌕</span><input id="finding-search" type="search" placeholder="Search findings..." aria-label="Search findings" /></label><select id="severity-filter" aria-label="Filter findings by severity"><option value="all">All severity</option><option value="critical">Critical</option><option value="high">High</option><option value="medium">Medium</option></select></div>
+              <div class="finding-list" id="finding-list">
+                <article class="finding" tabindex="0" data-severity="critical" data-finding="Privileged access review is overdue"><span class="severity-dot critical"></span><div class="finding-main"><div class="finding-title"><h3>Privileged access review is overdue</h3><span class="tag critical-tag">Critical</span></div><p>Quarterly access certification for 14 privileged accounts has not been completed.</p><div class="finding-meta"><span>IAM-042</span><span>•</span><span>Due Sep 24, 2024</span></div></div><span class="finding-owner avatar avatar-purple">ML</span></article>
+                <article class="finding" tabindex="0" data-severity="high" data-finding="Legacy TLS versions detected"><span class="severity-dot high"></span><div class="finding-main"><div class="finding-title"><h3>Legacy TLS versions detected</h3><span class="tag high-tag">High</span></div><p>Two internal services still permit TLS 1.0 connections.</p><div class="finding-meta"><span>NET-018</span><span>•</span><span>Due Sep 28, 2024</span></div></div><span class="finding-owner avatar avatar-orange">RK</span></article>
+                <article class="finding" data-severity="high"><span class="severity-dot high"></span><div class="finding-main"><div class="finding-title"><h3>Vendor SOC 2 evidence incomplete</h3><span class="tag high-tag">High</span></div><p>Annual assurance report is missing for 1 critical payment provider.</p><div class="finding-meta"><span>TPR-007</span><span>•</span><span>Due Oct 02, 2024</span></div></div><span class="finding-owner avatar avatar-blue">AS</span></article>
+                <article class="finding" data-severity="medium"><span class="severity-dot medium"></span><div class="finding-main"><div class="finding-title"><h3>Mobile release checklist needs update</h3><span class="tag medium-tag">Medium</span></div><p>Threat model is not attached to the latest mobile release record.</p><div class="finding-meta"><span>APP-031</span><span>•</span><span>Due Oct 08, 2024</span></div></div><span class="finding-owner avatar avatar-green">JD</span></article>
+                <p class="empty-state" id="empty-state" hidden>No findings match your search. Try a different term or severity.</p>
+              </div>
+            </div>
+            <div class="panel checklist-panel" id="evidence">
+              <div class="panel-header"><div><p class="eyebrow">YOUR WORKFLOW</p><h2>Review checklist</h2></div><span class="check-count"><strong id="check-count">3</strong> / 5</span></div>
+              <p class="panel-description">Keep this review moving by completing the next evidence steps.</p>
+              <div class="checklist">
+                <label class="check-item done"><input type="checkbox" checked /><span class="checkmark">✓</span><span><strong>Confirm review scope</strong><small>Completed today</small></span></label>
+                <label class="check-item done"><input type="checkbox" checked /><span class="checkmark">✓</span><span><strong>Request IAM evidence</strong><small>Completed Sep 18</small></span></label>
+                <label class="check-item done"><input type="checkbox" checked /><span class="checkmark">✓</span><span><strong>Review open findings</strong><small>Completed Sep 19</small></span></label>
+                <label class="check-item"><input type="checkbox" /><span class="checkmark"></span><span><strong>Validate incident tabletop</strong><small>Evidence due Sep 25</small></span></label>
+                <label class="check-item"><input type="checkbox" /><span class="checkmark"></span><span><strong>Share management summary</strong><small>Evidence due Sep 30</small></span></label>
+              </div>
+              <button class="button button-light full-width">Open evidence vault <span>→</span></button>
+            </div>
+          </section>
+          <footer><span><strong>ASTER / SECURITY</strong> · Internal security workspace</span><span>Demo environment · No production data</span></footer>
+        </div>
+      </main>
+    </div>
+    <div class="modal-backdrop" id="finding-modal" hidden>
+      <section class="finding-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" id="modal-close" aria-label="Close finding details">×</button>
+        <p class="eyebrow green">FINDING DETAIL · DEMO RECORD</p>
+        <h2 id="modal-title">Privileged access review is overdue</h2>
+        <div class="modal-status-row"><span class="tag critical-tag">Critical</span><span class="modal-id">IAM-042</span><span class="modal-status">Open · Owner ML</span></div>
+        <p class="modal-copy">Quarterly access certification for 14 privileged accounts has not been completed. Evidence should include the reviewer, approval decision, and timestamp for each account.</p>
+        <div class="modal-grid"><div><span>Due date</span><strong>Sep 24, 2024</strong></div><div><span>Control</span><strong>AC-2 · Account management</strong></div><div><span>Evidence</span><strong>0 of 3 items</strong></div><div><span>Last updated</span><strong>Today, 09:38 AM</strong></div></div>
+        <div class="modal-actions"><button class="button button-dark">Assign follow-up</button><button class="button button-light" id="modal-evidence">Request evidence</button></div>
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
